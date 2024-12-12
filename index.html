@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Sheet Practice Project </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: aliceblue;
+            padding:20px; 
+            line-height: 1.6;
+            
+        }
+        .form-container{
+            background-color: lightblue;
+            max-width: 500px;
+            margin:0 auto;
+            padding:30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px;
+        }
+        .form-header{
+            text-align: center;
+        }
+
+        .form-group{
+            margin-bottom:20px;
+        }
+        input,
+        select,
+        textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #333;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+        border-color: #4a90e2;
+        outline: none;
+        }
+
+        textarea {
+        resize: vertical;
+        min-height: 100px;
+        }
+
+        .help-text {
+        margin-top: 6px;
+        font-size: 14px;
+        color: #666;
+        }
+        .checkbox-group {
+        margin: 20px 0;
+        }
+        .checkbox-group input {
+        width: auto;
+        margin-right: 10px;
+        }
+        .checkbox-group label {
+            display: inline;
+            color: #666;
+            }
+
+            button {
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            }
+            button:hover {
+            background: #357abd;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Create Account</h1>
+            <p>Fill in the deatails to get started</p>
+        </div>
+        <br><br>
+        <form id="signupForm">
+            <!-- Form Groups will go here -->
+            <div class="form-group">
+                        
+                <label class="required" for="fullname">Full Name</label>
+                <input type="text" id="fullname" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label class="required" for="email">Email</label>
+                <input type="email" id="email" required placeholder="example@email.com">
+        </div>
+           
+        <div class="form-group">
+
+        
+            <label class="required" for="password">Password</label>
+            <input type="password" id="password" required>
+        </div>
+            <div class="form-group">
+                <label class="required" for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value=" ">Select Your Role</option>
+                    <option value="1 ">Role 1</option>
+                    <option value="2 ">Role 2</option>
+                    <option value="3 ">Role 3</option>
+                    <option value="4 ">Role 4</option>
+                </select>
+    
+            </div>
+
+         <div class="form-group">
+            <label for="bio">Bio</label>
+
+            <textarea
+            id="bio"
+            name="bio"
+            placeholder="Tell us about yourself"
+            required></textarea>
+          <div class="help-text"> Keep it short and sweet</div>
+         </div>
+
+          
+
+            <div class="checkbox-group">
+                <label  for="terms" class="required">I have read the Terms and Conditions</label>
+                <input type="checkbox"  id="terms"  required>
+            </div>
+         
+         <div class="form-group">
+            <button type="submit">Create Account</button>
+         </div>
+
+           
+            
+            
+    
+
+        
+            
+        </form>
+    </div>
+</body>
+</html>
